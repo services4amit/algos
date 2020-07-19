@@ -1,0 +1,116 @@
+Syntax parser: The complier which converts our code to computer understaing language
+
+lexical env: where code sits
+
+execution context:which lexical ewnv is running
+
+global execution context: its base execution context, it create global object and this
+
+Hoisting: var(not let) are declared but functions dclared and defined
+
+undefined: is a special value(I have not set the value)
+
+
+innvocation: running a functions
+
+variable env: every variable ll have their own environment
+
+scope:if function wont get variable in its scope then it ll look to outer scope.
+
+scope chain: It ll go outer scope then outer then global.
+
+
+dynamic typing: variable ll get to know it's type when code is running
+
+types:
+
+coercion: To convert a value from one type to another.
+ It does the operation dynamically with variables
+
+equals :https://www.w3resource.com/javascript/operators/comparison-operator.php
+
+default values: We can set default values by implementing || operator.
+
+
+namespace:Its container for variables and functions. to keep them separate of same name
+var name="hello"
+var name="hola"
+
+var english.name="hello"
+var spanish.name="hola"
+
+first class functions: You can do everything with other types
+in js can also do with functions as well like assign them to variables,
+pass them around, create on the fly(functions are object)we can use fun as object
+
+
+functions statements vs function expression:
+In fun exp, anonynous fun is created. But if its invoked before defining, 
+then it ll give error as undefined is not  a function.Becoz Hoisting ll assign value undefined
+
+by value: primitive types
+
+by reference: objects , but = operator gives new address
+
+syntax parser: doing automatic ";" insertion, so return your response properly 
+
+
+IIFE: Immediately invoke function expression : let greet=function(){}() || (function(name){return })
+|| (function(name){console.log()}())
+
+closures: function returns another function. the execution context relationship between those functions
+In above case though execution context of parent fun is not der still child method has access
+to the its variable
+
+bind , call, apply:
+
+function borrowing:
+
+function currying: creating a copy of a function by preseting some params
+
+
+prototypal inheritance:
+
+refelection: keeping all objects properties in one object
+
+
+-----------------------------------------------------------
+ES6::::
+-----------------------------------------------------------
+
+
+object literals: if object keys are not defined then it ll take value from already created variable
+
+dynamic assign property value: let agekey="age"; obj={[agekey]:25}
+
+rest operator= ...values= args
+
+spread operaotr= used to split
+
+
+for of:
+
+template literals: `dfsfsfsf`
+
+destructuring array: let arr=[1,2,3,4]; let [a,b]=arr;
+
+destructuring in obj: it works with name but not by position
+
+
+MODULES-----------------------
+
+import {} from './'
+
+export 
+
+import {,,,,} from
+
+export {,,,}
+
+we can have only one default export
+
+Can use "as" for another name for imports
+
+* as all : to import everything
+
+static method:
