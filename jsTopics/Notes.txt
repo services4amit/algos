@@ -1,4 +1,4 @@
-Syntax parser: The complier which converts our code to computer understaing language
+Syntax parser: The compiler which converts our code to computer understaing language
 
 lexical env: where code sits
 
@@ -55,10 +55,12 @@ by reference: objects , but = operator gives new address
 syntax parser: doing automatic ";" insertion, so return your response properly 
 
 
-IIFE: Immediately invoke function expression : let greet=function(){}() || (function(name){return })
+IIFE: Immediately invoke function expression : let greet=function(){}() ||
+ (function(name){return })
 || (function(name){console.log()}())
 
-closures: function returns another function. the execution context relationship between those functions
+closures: function returns another function. the execution context relationship 
+between those functions
 In above case though execution context of parent fun is not der still child method has access
 to the its variable
 

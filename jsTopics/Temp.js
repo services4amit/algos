@@ -1,39 +1,47 @@
-// console.log(global)
-// console.log(this)
+function countPairs(numbers, k) {
+    // Write your code here
+    let count = 0;
+    let arr = [];
+    for (let i = 0; i < numbers.length; i++) {
+        
+        for (let j = 0; j < numbers.length; j++) {
+            
+            if (Math.abs(numbers[i] - numbers[j]) == k) {
 
-function check(str1, str2) {
+                if (arr.includes(numbers[i]) && arr.includes(numbers[j])) {
 
-    let resp = true;
-    if (str1.length != str2.length) {
-        return false;
-    } else {
-        let len = str1.length;
-        let obj = {}
-        for (let i = 0; i < len; i++) {
 
-            if (obj[str1[i]]) {
-                obj[str1[i]] = obj[str1[i]] - 1;
-            } else {
-                obj[str1[i]] = 1;
-            }
-            if (obj[str2[i]]) {
-                obj[str2[i]] = obj[str1[i]] - 1;
-            } else {
-                obj[str2[i]] = 1;
-            }
-        }
+                } else {
 
-        for (let j = 0; j < len; j++) {
-
-            let values = Object.keys(obj);
-            for (let k = 0; k < values.length; k++) {
-                if (values[k] != 1) {
-                    resp = false;
+                    count++;
+                    arr.push(numbers[i]);
+                    arr.push(numbers[j])
                 }
             }
-
         }
+      
+    }
+    return count;
 
-        return resp;
+}
+
+console.log(countPairs([6, 1, 2, 3, 4, 5, 6], 2))
+
+numbers.sort((a,b) => (a - b))
+let result = 0
+for(let i = 0; i < numbers.length; i++){
+    if(i > 0 && numbers[i] === numbers[i - 1])
+        continue
+    for(let j = i + 1; j < numbers.length; j++){
+        let diff = numbers[j] - numbers[i]
+        if(diff === k){
+            result += 1
+            break
+        }
+        if(diff > k) break
     }
 }
+return result
+
+
+

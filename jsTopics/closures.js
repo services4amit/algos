@@ -12,7 +12,7 @@ function greet(salutation) {
 
 let callGreet = greet("hi");
 
-callGreet("Ajit")
+// callGreet("Ajit")
 
 
 //Closure with IIFE
@@ -35,8 +35,49 @@ function greetNum() {
 
 let callGreetAgain = greetNum();
 
-callGreetAgain[0]()
-callGreetAgain[1]()
-callGreetAgain[2]()
+// callGreetAgain[0]()
+// callGreetAgain[1]()
+// callGreetAgain[2]()
+
+//closure with returning object
+
+function increment() {
+
+    let count = 0;
+
+    function increase() {
+        count++;
+        console.log("Count increased ")
+    }
+    function reset() {
+        count = 0;
+        console.log("Count reset done ")
+    }
+    print = () => {
+        console.log("Count is ", count)
+    }
 
 
+
+
+    console.log("inside return")
+
+    return {
+        increase: function () { increase() },
+        print: function () {
+            print()
+        },
+        reset: function () { reset() }
+
+    }
+
+
+
+
+}
+
+let callincrement = increment();
+callincrement.increase()
+callincrement.increase()
+callincrement.reset()
+callincrement.print()
